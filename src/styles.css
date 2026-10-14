@@ -1,4 +1,124 @@
 
-*{
-    border: 1px solid black;
+@font-face {
+  font-family: pokeFont;
+  src: url(./fonts/Pokemon\ Solid.ttf);
+}
+@font-face {
+  font-family: pkmn;
+  src: url(./fonts/PKMN\ RBYGSC.ttf);
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 0;
+    background-color: rgb(221, 214, 214);
+}
+header {
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(97, 95, 95, 0.2);
+}
+.mainTitle {
+    text-align: center;
+    font-family: pkmn;
+    font-size: 20px;
+    margin: 7px 0;
+}
+.mainTitle>span {
+    font-family: pokeFont;
+    font-size: 40px;
+    color: #ffcb05;
+    text-shadow: 
+    2px  2px 0 #21386e,
+    -2px -2px 0 #3466af,
+    2px -2px 0 #1d2c5e,
+    -2px  2px 0 #21386e;
+}
+
+main{
+    display: flex;
+    gap: 10px;
+    justify-content: space-around;
+    margin: 2px 12px;
+}
+
+#Randomizer {
+    position: sticky;
+    top: 10px;
+    width: 65%;
+    height: min-content;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    background-color: #f7f7f7;
+    padding: 5px;
+    box-sizing: content-box;
+    border: 5px solid #6f677f;
+    outline: 2px solid ;
+}
+#typeSelector {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.typeSelect.types {
+    display: none;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 2px;
+}
+.typeSelect {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2px;
+}
+#randomizerButton {
+    display: flex;
+    justify-content: center;
+}
+#displayPokemon {
+    height: min-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+}
+.pokemonImage {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+}
+
+#table {
+    width: 35%;
+    height: min-content;
+    display: flex;
+    flex-direction: column;
+}
+#table > div {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+.pokemonPartDiv  {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.displayPokemonTable {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.pokemonImageTable {
+    width: 100%;
+    margin: 5px;
+    aspect-ratio: 1 / 1;
 }
