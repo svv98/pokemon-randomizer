@@ -194,7 +194,9 @@ main{
 .pokemonImageTable img {
     width: 100%;
 }
-
+.pokemonImageTable img:hover{
+    cursor: pointer;
+}
 #selectTypeModal {
     width: 70%;
     height: fit-content;
@@ -206,4 +208,79 @@ main{
 }
 #selectTypeForm > fieldset{
     border: none;
+    font-family: pkmn;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+    align-items:center;
+    margin: 0;
+    box-sizing: border-box;
+}
+#selectTypeForm > fieldset > legend {
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+.allButtons {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+.allButtons > button {
+    background-color: rgba(168, 168, 168, 0.4);
+    border: 1px solid rgba(168, 168, 168, 0.45);
+    padding: 5px;
+    border-radius: 10px;
+    font-family: pkmn;
+    font-size: 15px;
+}
+.allButtons > button:hover {
+    cursor: pointer;
+    background-color: rgba(168, 168, 168, 0.8);
+    border: 1px solid rgba(168, 168, 168, 1);
+}
+.typeCheckboxes {
+    display: flex;
+    flex-wrap: wrap;
+}
+.checkboxButton input[type="checkbox"] {
+    display: none;
+}
+.checkboxButton .typeButton {
+    display: inline-block;
+    padding: 8px;
+    border-radius: 100px;
+    cursor: pointer;
+    user-select: none;
+    transition: all 0.2s ease-in-out;
+}
+.checkboxButton .typeButton:hover {
+    background-color: #e2e2e2;
+    border-color: #b5b5b5;
+}
+.checkboxButton input[type="checkbox"]:checked + .typeButton {
+    background-color: #837f7f;
+    border-color: #2c2c2c;
+}
+.typeButton img {
+    width: 75px;
+}
+.modalButtons {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+.modalButtons > button{
+    background-color: rgba(168, 168, 168, 0.4);
+    border: 1px solid rgba(168, 168, 168, 0.45);
+    padding: 5px;
+    border-radius: 10px;
+    font-family: pkmn;
+    font-size: 16px;
+}
+.modalButtons > button:hover {
+    cursor: pointer;
+    background-color: rgba(168, 168, 168, 0.8);
+    border: 1px solid rgba(168, 168, 168, 1);
 }
