@@ -14,9 +14,11 @@ body{
     gap: 10px;
     margin: 0;
     background-color: rgb(221, 214, 214);
+    box-sizing: border-box;
 }
 header {
     width: 100%;
+    display: flex;
     align-items: center;
     justify-content: center;
     background-color: rgba(97, 95, 95, 0.2);
@@ -25,7 +27,7 @@ header {
     text-align: center;
     font-family: pkmn;
     font-size: 20px;
-    margin: 7px 0;
+    margin: 0;
 }
 .mainTitle>span {
     font-family: pokeFont;
@@ -40,7 +42,7 @@ header {
 
 main{
     display: flex;
-    gap: 10px;
+    max-width: 100%;
     justify-content: space-around;
     margin: 2px 12px;
 }
@@ -48,16 +50,18 @@ main{
 #Randomizer {
     position: sticky;
     top: 10px;
-    width: 65%;
+    width: 60%;
     height: min-content;
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 10px;
     background-color: #f7f7f7;
-    padding: 5px;
-    box-sizing: content-box;
+    padding: 10px 0;
+    box-sizing: border-box;
     border: 5px solid #6f677f;
-    outline: 2px solid ;
+    outline: 1px solid black;
+    border-radius: 10px;
+    margin: 0;
 }
 #typeSelector {
     display: flex;
@@ -76,40 +80,105 @@ main{
     align-items: center;
     margin: 2px;
 }
+.typeSelect button {
+    background-color: rgba(168, 168, 168, 0.4);
+    border: 1px solid rgba(168, 168, 168, 0.45);
+    padding: 5px;
+    border-radius: 10px;
+    font-family: pkmn;
+    font-size: 10px;
+}
+.selectTypeButton:hover {
+    cursor: pointer;
+    background-color: rgba(168, 168, 168, 0.8);
+    border: 1px solid rgba(168, 168, 168, 1);
+}
+
 #randomizerButton {
     display: flex;
     justify-content: center;
 }
+#randomizerButton button{
+    background-color: rgba(168, 168, 168, 0.2);
+    border: 1px solid rgba(168, 168, 168, 0.22);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+}
+#randomizerButton img{
+    height: 50px;
+    aspect-ratio: 1 / 1;
+}
+#randomizerButton>button:hover {
+    cursor: pointer;
+    background-color: rgba(168, 168, 168, 0);
+    border: 1px solid rgba(168, 168, 168, 0);
+}
 #displayPokemon {
-    height: min-content;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 10px;
-    padding: 10px;
 }
 .pokemonImage {
+    border: 3px solid green;
+    border-bottom: 0;
+    width: 80%;
+    max-width: 30vb;
+    border-radius: 10px 10px 0 0 ;
+}
+.pokemonImage img{
     width: 100%;
     aspect-ratio: 1 / 1;
 }
+.pokemonName {
+    background-color: green;
+    border: 3px solid green;
+    border-radius: 0 0 10px 10px;
+    width: 80%;
+    text-align: center;
+    padding: 5px 0;
+    font-family: pkmn;
+    font-size: 15px;
+    color: black;
+    text-shadow: 
+        0 0 3px #fff,
+        -2px 0 #fff,
+        0 2px #fff;
+
+}
 
 #table {
-    width: 35%;
+    width: 30%;
     height: min-content;
     display: flex;
     flex-direction: column;
+    background-color: #f7f7f7;
+    box-sizing: border-box;
+    border: 4px solid #6f677f;
+    outline: 1px solid black;
+    border-radius: 10px;
+    margin: 0;
 }
 #table > div {
     display: flex;
     width: 100%;
     justify-content: center;
+    border-bottom: 1px solid #6f677f;
+    border-top: 1px solid #6f677f;
 }
 .pokemonPartDiv  {
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
+}
+.pokemonPart {
+    font-family: pkmn;
+    font-size: 10px;
+    text-align: start;
 }
 .displayPokemonTable {
     width: 100%;
@@ -121,4 +190,7 @@ main{
     width: 100%;
     margin: 5px;
     aspect-ratio: 1 / 1;
+}
+.pokemonImageTable img {
+    width: 100%;
 }
